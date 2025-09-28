@@ -7,20 +7,26 @@
 </head>
 <body>
 
-    
     <nav>
+        <div class="logo">
+            <img src="images/logop.PNG" alt="Logo">
+        </div>
         <ul>
-            <li><a href="#home">Home</a></li>
+            <li><a href="#home">Início</a></li>
             <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#disciplinas">DIW</a></li>
+            <li><a href="#disciplina">Disciplina</a></li>
         </ul>
     </nav>
 
     <section id="home" class="hero">
-        <img src="images/logop.PNG" alt="Imagem Hero" class="hero-img">
         <div class="hero-text">
             <h1>Gonçalo Alegria</h1>
-            <p>Que desenvolve aplicações web modernas </p>
+            <p>Um programador que desenvolve aplicações web modernas</p>
+            <a href="#projetos" class="btn">Ver Projetos</a>
+        </div>
+
+        <div class="hero-logo">
+            <img src="images/logop.PNG" alt="Logo Gonçalo Alegria">
         </div>
     </section>
 
@@ -28,19 +34,22 @@
         <h2>Projetos / Labs</h2>
         <p>Alguns exercícios desenvolvidos ao longo da UC.</p>
         <div class="cards">
-            <a href="lab1/index.html" class="card">Lab 1</a>
-            <a href="lab2/index.html" class="card">Lab 2</a>
-            <a href="lab3/index.html" class="card">Lab 3</a>
+            <a href="lab1/index.html" class="card">Lab 1<br><small>Estrutura base e semântica</small></a>
+            <a href="lab2/index.html" class="card">Lab 2<br><small>CSS e layout responsivo</small></a>
+            <a href="lab3/index.html" class="card">Lab 3<br><small>Interatividade com JS</small></a>
         </div>
     </section>
 
-    <section id="disciplinas" class="disciplinas">
-        <div class="texto">
-            <h2>Disciplina: Desenvolvimento de Interfaces Web</h2>
-            <p>Nesta UC abordamos tecnologias como HTML, CSS, JavaScript e frameworks modernas.</p>
-        </div>
-    
-    </section>
+    <section id="disciplina" class="disciplina">
+    <div class="texto">
+        <h2>Desenvolvimento de Interfaces Web</h2>
+        <p>Nesta UC exploramos o desenvolvimento web moderno através de HTML, CSS, JavaScript e princípios de design responsivo.</p>
+    </div>
+    <div class="wordcloud">
+        <img src="images/diw.svg" alt="Wordcloud DIW">
+    </div>
+</section>
+
 
     <footer>
         <p>Universidade Lusófona © 2025</p>
