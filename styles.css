@@ -1,4 +1,4 @@
-/* ------------------- RESET E BASE ------------------- */
+
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +10,7 @@ html {
   font-family: 'Arial', sans-serif;
 }
 
-/* ------------------- NAV ------------------- */
+/* ------------------- Nav ------------------- */
 nav {
   position: fixed;
   width: 100%;
@@ -30,12 +30,11 @@ nav {
 }
 
 .logo img {
-  height: 120px;
+  height: 80px;
   width: auto;
   object-fit: contain;
   position: relative;
-  top: 10px;
-  filter: brightness(3);
+  top: 15px;
 }
 
 nav ul {
@@ -55,7 +54,7 @@ nav a:hover {
   color: #5de0e6;
 }
 
-/* --- HERO FINAL ESTÁVEL --- */
+/* --- Hero --- */
 .hero {
   height: 100vh;
   background: #006573;
@@ -93,22 +92,23 @@ nav a:hover {
 }
 
 .hero-logo {
-  position: absolute;
-  right: -8%;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
 }
 
 .hero-logo img {
-  height: 900px;
-  width: auto;
-  filter: brightness(3);
+    height: 550px; 
+    width: auto;
+  
 }
 
 
 
-/* ------------------- PROJETOS ------------------- */
+
+/* ------------------- Projetos ------------------- */
 .projetos {
   min-height: 100vh;
   padding: 8em 10%;
@@ -168,7 +168,7 @@ nav a:hover {
   color: #005e66;
 }
 
-/* ------------------- DISCIPLINA ------------------- */
+/* ------------------- Disciplina ------------------- */
 .disciplina {
   min-height: 100vh;
   display: flex;
@@ -214,7 +214,7 @@ nav a:hover {
   filter: brightness(1.1);
 }
 
-/* ------------------- FOOTER ------------------- */
+/* ------------------- Footer ------------------- */
 footer {
   background: #111;
   color: white;
@@ -222,7 +222,7 @@ footer {
   padding: 1em;
 }
 
-/* ------------------- AJUSTES PARA PORTÁTEIS / TABLETS ------------------- */
+/* ------------------- Tablets ------------------- */
 @media (max-width: 1100px) and (min-width: 769px) {
   .hero {
     justify-content: center;
@@ -260,9 +260,9 @@ footer {
   }
 }
 
-/* ------------------- MOBILE ------------------- */
+/* ------------------- Dispositivos Moveis ------------------- */
 @media (max-width: 768px) {
-  /* Nav sem logo */
+  
   .logo {
     display: none;
   }
@@ -281,7 +281,7 @@ footer {
     font-size: 1.1em;
   }
 
-  /* Hero ajustado */
+  
   .hero {
     flex-direction: column;
     justify-content: center;
@@ -318,14 +318,14 @@ footer {
     filter: brightness(2.5);
   }
 
-  /* Cards mais compactos */
+  
   .card {
     flex: 0 0 auto;
     padding: 0.8em 1.2em;
     min-height: 100px;
   }
 
-  /* Disciplina vertical */
+  
   .disciplina {
     flex-direction: column;
     align-items: center;
