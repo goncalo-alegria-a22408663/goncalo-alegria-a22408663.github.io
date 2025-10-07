@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lab — Eventos do Rato</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 id="pageTitle">Contador</h1>
+      <p class="lead">Eventos de rato e manipulação do DOM.</p>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="container">
+      <section class="panel" aria-labelledby="titulo-contador">
+        <h2 id="titulo-contador">Contador</h2>
+        <p>Valor: <strong id="countValue">0</strong></p>
+        <div class="buttons">
+          <button id="incBtn" class="btn">+1</button>
+          <button id="decBtn" class="btn btn--secondary">-1</button>
+          <button id="resetBtn" class="btn btn--ghost" title="Duplo clique">Reset</button>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="titulo-imagem">
+  <h2 id="titulo-imagem">Card</h2>
+  <div id="colorCard" class="color-card" aria-label="Card interativo"></div>
+  <p>Passe o rato por cima do card para ver o efeito.</p>
+</section>
+
+
+      <section class="panel" aria-labelledby="titulo-mousemove">
+        <h2 id="titulo-mousemove">Mousemove</h2>
+        <p>Mexe o rato dentro da caixa.</p>
+        <div id="playground" class="playground" tabindex="0" aria-label="Área de demonstração">
+          <span id="coords">x: 0, y: 0</span>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span></small>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
