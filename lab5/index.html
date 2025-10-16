@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Interações JS</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <main>
+
+    <p id="passa-por-aqui" class="bloco" tabindex="0">1. Passa por aqui!</p>
+
+    <div id="pinta-me-section" class="bloco">
+      <span id="pinta-me">2. Experimenta a minha paleta de cores!</span>
+      <button class="paint" data-color="purple">Purple</button>
+      <button class="paint" data-color="yellow">Yellow</button>
+      <button class="paint" data-color="green">Green</button>
+    </div>
+
+    <div id="experimenta-escrever" class="bloco">
+      <label for="echo">3. Experimenta escrever...</label>
+      <input id="echo" type="text" />
+    </div>
+
+    <section id="escolha-uma-cor" class="bloco">
+  <span>4. Escolha uma cor:</span>
+  <select id="corSelect">
+    <option value="white">White</option>
+    <option value="red">Red</option>
+    <option value="blue">Blue</option>
+  </select>
+</section>
+
+    <div id="conta" class="bloco">
+      <button id="countBtn">5. Conta!</button>
+      <span id="counter" class="badge">0</span>
+    </div>
+
+    <section id="nome-idade" class="bloco">
+      <span> 6.</span>
+      <form id="infoForm">
+        <input type="text" id="nome" placeholder="Nome" required/>
+        <input type="number" id="idade" placeholder="Idade" min="0" required/>
+        <button type="submit">Submit</button>
+      </form>
+      <p id="saudacao"></p>
+    </section>
+
+    <section id="contador-automatico" class="bloco">
+      <span>7. Automatic Counter:</span>
+      <span id="autoCounter" class="badge">0</span>
+    </section>
+
+  </main>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

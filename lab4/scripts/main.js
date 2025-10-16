@@ -9,13 +9,13 @@ const coordsEl = document.getElementById("coords");
 
 let counter = 0;
 
-function renderCount(){ countEl.textContent = counter; }
+function renderCount() { countEl.textContent = counter; }
 
-function onClickInc(){ counter++; renderCount(); }
-function onClickDec(){ counter--; renderCount(); }
-function onDblclickReset(){ counter = 0; renderCount(); }
-function onMouseOverCard(){ colorCard.classList.add("is-hover"); }
-function onMouseOutCard(){ colorCard.classList.remove("is-hover"); }
+function onClickInc() { counter++; renderCount(); }
+function onClickDec() { counter--; renderCount(); }
+function onDblclickReset() { counter = 0; renderCount(); }
+function onMouseOverCard() { colorCard.classList.add("is-hover"); }
+function onMouseOutCard() { colorCard.classList.remove("is-hover"); }
 function onMouseMovePlayground(ev){
   const rect = playground.getBoundingClientRect();
   const x = Math.round(ev.clientX - rect.left);
@@ -24,6 +24,7 @@ function onMouseMovePlayground(ev){
 }
 
 function init(){
+
   if(yearEl) yearEl.textContent = new Date().getFullYear();
   renderCount();
   incBtn.addEventListener("click", onClickInc);
