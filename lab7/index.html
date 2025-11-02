@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Loja DEISI</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <header>
+    <img id="logo" src="deisi-inverse.svg" alt="DEISI">
+    <h1>Loja DEISI</h1>
+    <nav aria-label="Principal">
+      <ul>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#cesto">Cesto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    
+    <section id="produtos" aria-labelledby="tit-produtos">
+      <h2 id="tit-produtos">Selecione os seus Produtos</h2>
+
+      <form id="toolbar" aria-label="Filtros">
+        <label>
+          Filtrar
+          <select id="filtro-categoria">
+            <option value="">Todas as categorias</option>
+          </select>
+        </label>
+
+        <label>
+          Ordenar
+          <select id="ordenar">
+            <option value="">Ordenar pelo preço</option>
+            <option value="desc">Preço Decrescente</option>
+            <option value="asc">Preço Crescente</option>
+          </select>
+        </label>
+
+        <label class="grow">
+          Procurar
+          <input id="pesquisar" type="search" placeholder="pesquise por produto">
+        </label>
+      </form>
+      
+    </section>
+
+    
+    <section id="cesto" aria-labelledby="tit-cesto">
+
+      <h2 id="tit-cesto">Produtos Selecionados</h2>
+      
+      <section id="checkout" aria-label="Checkout">
+        <p class="linha"><span>Custo total:</span> <output id="total-sem-desc">0,00 €</output></p>
+        <label class="linha">
+          <span>É estudante do DEISI?</span>
+          <input id="estudante" type="checkbox">
+        </label>
+        <label class="linha">
+          <span>Cupão de desconto:</span>
+          <input id="cupao" type="text" placeholder="ex: black-friday">
+        </label>
+        <button id="btn-comprar" type="button">Comprar</button>
+        <p class="linha forte"><span>Valor final a pagar (com eventuais descontos):</span> <output id="total-com-desc">0,00 €</output></p>
+        <p class="linha"><span>Referência de pagamento:</span> <output id="referencia">—</output></p>
+        <p class="erro" id="erro-checkout"></p>
+      </section>
+
+      <p id="total-cesto" class="total">Custo total: 0 €</p>
+      
+    </section>
+  </main>
+
+  <footer>
+    <small>2024</small>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
