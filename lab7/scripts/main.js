@@ -191,6 +191,17 @@ function atualizarCesto(){
   document.querySelector('#erro-checkout').textContent = ''
 }
 
+function gerarReferencia(){
+  const d = new Date()
+  const yy = String(d.getFullYear()).slice(2)
+  const mm = String(d.getMonth()+1).padStart(2,'0')
+  const dd = String(d.getDate()).padStart(2,'0')
+  const seq = String(Math.floor(Math.random()*10000)).padStart(4,'0')
+  return `${yy}${mm}${dd}-${seq}`
+}
+
+
+
 async function checkout(){
   const lista = obterCesto()
   const estudante = document.querySelector('#estudante').checked
