@@ -17,6 +17,10 @@ function inicializarUI(){
   document.querySelector('#ordenar').addEventListener('change', aplicarControles)
   document.querySelector('#pesquisar').addEventListener('input', aplicarControles)
   document.querySelector('#btn-comprar').addEventListener('click', checkout)
+  const chk = document.querySelector('#estudante')
+  const inp = document.querySelector('#cupao')
+  if (chk) chk.addEventListener('change', atualizarCheckout)
+  if (inp) inp.addEventListener('input', atualizarCheckout)
 }
 
 async function carregarProdutosAPI(){
@@ -146,6 +150,29 @@ function criarProdutoCesto(prod, index){
   return art
 }
 
+function totalBruto(){
+  return obterCesto().reduce((s,p) => s + (Number(p.price)||0), 0)
+}
+
+function aplicarDescontos(total){
+  const est = document.querySelector('#estudante')?.checked
+  const cupao = document.querySelector('#cupao')?.value.trim().toLowerCase()
+  let d = 0
+  if (est) d += .10
+  if (cupao === 'black-friday') d += .15
+  if (d > 0) return Math.max(0, total * (1 - d))
+  return total
+}
+
+function atualizarCheckout(){
+  const bruto = totalBruto()
+  const final = aplicarDescontos(bruto)
+  const sem = document.querySelector('#total-sem-desc')
+  const com = document.querySelector('#total-com-desc')
+  if (sem) sem.value = `${bruto.toFixed(2)} €`
+  if (com) com.value = `${final.toFixed(2)} €`
+}
+
 function atualizarCesto(){
   const sec = document.querySelector('#cesto')
   sec.querySelectorAll('article').forEach(a => a.remove())
@@ -159,7 +186,7 @@ function atualizarCesto(){
 
   document.querySelector('#total-cesto').textContent = `Custo total: ${total.toFixed(2)} €`
   document.querySelector('#total-sem-desc').value = `${total.toFixed(2)} €`
-  document.querySelector('#total-com-desc').value = `${total.toFixed(2)} €`
+  document.querySelector('#total-com-desc').value = `${aplicarDescontos(total).toFixed(2)} €`
   document.querySelector('#referencia').value = '—'
   document.querySelector('#erro-checkout').textContent = ''
 }

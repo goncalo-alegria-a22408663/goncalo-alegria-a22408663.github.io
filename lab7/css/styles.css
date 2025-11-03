@@ -72,6 +72,38 @@ main{
   gap:56px;
 }
 
+#toolbar{
+  grid-column:1 / -1;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:12px 14px;
+  background:#ffffff;
+  border:1px solid var(--cinza);
+  border-radius:12px;
+  width:100%;
+  max-width:1100px;
+  margin:0 auto 16px;
+}
+
+#toolbar label{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:14px;
+}
+
+#toolbar .grow{ flex:1; }
+
+#toolbar input[type="search"],
+#toolbar select{
+  padding:8px 10px;
+  border:1px solid var(--cinza);
+  border-radius:10px;
+  width:100%;
+}
+
+
 #produtos{
   padding:36px 28px 8px;
   max-width:1200px;
@@ -174,7 +206,7 @@ button:hover{
   background:#eeeeee
 }
 
-/* Cards dentro do cesto */
+
 #cesto .card{
   background:#ffffff;
   color:#222;
@@ -196,7 +228,7 @@ button:hover{
   margin-top:8px;
 }
 
-/* Total antigo escondido (fica só o painel) */
+
 #cesto .total{
   grid-column:1 / -1;
   text-align:center;
@@ -207,7 +239,7 @@ button:hover{
   display:none;
 }
 
-/* Checkout a ocupar toda a largura útil e texto centrado */
+
 #checkout{
   grid-column:1 / -1;
   width:100%;
