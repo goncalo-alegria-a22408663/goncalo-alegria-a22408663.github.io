@@ -158,7 +158,7 @@ function aplicarDescontos(total){
   const est = document.querySelector('#estudante')?.checked
   const cupao = document.querySelector('#cupao')?.value.trim().toLowerCase()
   let d = 0
-  if (est) d += .10
+  if (est) d += .25
   if (cupao === 'black-friday') d += .15
   if (d > 0) return Math.max(0, total * (1 - d))
   return total
